@@ -287,16 +287,30 @@ function showPosition(position) {
 
 /* Form submit */
 $("#submit").click(function(){
-	$.get( "/users/7", function(response) {
-		
+	$.get( "/users/5", function(response) {
+
 		let data = response.replace(/\\/g, "");
 		data = JSON.parse(data);
-		let recommendedList = ``;
+
+		console.log(response);
+		let recommendedList = `<p style="margin-left: 40px">Recommended events:</p>`;
 
 		recommendedList += "<ul>";
 
   		for(event in data){
-  			recommendedList += `<li>${data[event].Activity} Time: ${data[event].Time} Location: ${data[event].Location}</li>`;
+  			recommendedList += `<li>
+	  			<a href="${data[event].URL}">${data[event].Activity}</a> 
+	  			<br>
+	  			Day: ${data[event].Day} 
+	  			<br>
+	  			Location: ${data[event].Location}
+	  			<br>
+	  			Predicted Rating: ${data[event].rating}
+	  			<br>
+	  			Latitude: ${data[event].lat}
+	  			<br>
+	  			Longitude: ${data[event].lng}
+  			</li>`;
   		}
 		recommendedList += "<ul>";
 
