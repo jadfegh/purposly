@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Purposly</title>
+  <title>Purposely</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -103,15 +103,15 @@
     <div style="text-align: center;">
       <H3>What is your mode of transport ?<H3>
 
-      <i class="fa fa-male fa-2x" aria-hidden="true"></i>&nbsp;
+      <i onclick="modeTransport = 8; showPosition(myposition);" class="fa fa-male fa-2x" aria-hidden="true" style="cursor: pointer;"></i>&nbsp;</a>
 
-      <i class="fa fa-bicycle fa-2x" aria-hidden="true" style="color:#327728"></i>&nbsp;
+      <i onclick="modeTransport = 7; showPosition(myposition);" class="fa fa-bicycle fa-2x" aria-hidden="true" style="color:#327728; cursor: pointer;"></i>&nbsp;
 
-      <i class="fa fa-car fa-2x" aria-hidden="true" style="color:#774728"></i>&nbsp;
+      <i onclick="modeTransport = 6; showPosition(myposition);" class="fa fa-car fa-2x" aria-hidden="true" style="color:#774728; cursor: pointer;"></i>&nbsp;
 
-      <i class="fa fa-bus fa-2x" aria-hidden="true" style="color:#f4ce42"></i>&nbsp;
+      <i onclick="modeTransport = 8; showPosition(myposition);" class="fa fa-bus fa-2x" aria-hidden="true" style="color:#f4ce42; cursor: pointer;"></i>&nbsp;
 
-      <i class="fa fa-wheelchair-alt fa-2x" aria-hidden="true" style="color:#324d91"></i>
+      <i onclick="modeTransport = 9; showPosition(myposition);" class="fa fa-wheelchair-alt fa-2x" aria-hidden="true" style="color:#324d91; cursor: pointer;"></i>
     </div>
 
 
@@ -125,6 +125,7 @@
         <div class="col col-md-4">
 
           <script type="text/javascript">
+          var myposition;
 
           function yesnoCheck() {
               if (document.getElementById('yesCheck').checked) {
@@ -261,6 +262,7 @@
 <div id="demo"></div>
 
 <script>
+var modeTransport = 0;
 $(function() {
    getLocation();
 }); 
@@ -276,11 +278,12 @@ function getLocation() {
 }
 
 function showPosition(position) {
+  myposition = position
   x.innerHTML = "Latitude: " + position.coords.latitude + 
   "<br>Longitude: " + position.coords.longitude;
   var mapProp= {
   center:new google.maps.LatLng(position.coords.latitude,position.coords.longitude),
-  zoom:8,
+  zoom:modeTransport,
   };
   var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 }
