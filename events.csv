@@ -1,5 +1,5 @@
-event_id,Activity,Time,Location,,,id
-1,Some event,Friday,9140 Perras Riviere des Prairies,,,-
-2,Accompagnement des personnes ayant une deficience intellectuelle,Saturday,9140 Perras Riviere des Prairies,,,-
-3,Accompagnement des personnes ayant une deficience intellectuelle,Saturday,9140 Perras Riviere des Prairies,,,-
-4,Accompagnement des personnes ayant une deficience intellectuelle,Saturday,11200 Renaude Lapointe Anjou,,,-
+event_id,Activity,Time,Location
+1,Some event,Friday,9140 Perras Riviere des Prairies
+2,Accompagnement des personnes ayant une deficience intellectuelle,Saturday,9140 Perras Riviere des Prairies
+3,Accompagnement des personnes ayant une deficience intellectuelle,Saturday,9140 Perras Riviere des Prairies
+4,Accompagnement des personnes ayant une deficience intellectuelle,Saturday,11200 Renaude Lapointe Anjou
