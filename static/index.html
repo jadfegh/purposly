@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Purposly</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+    .agenda {}
+    /* Dates */
+    
+    .agenda .agenda-date {
+        width: 170px;
+    }
+    
+    .agenda .agenda-date .dayofmonth {
+        width: 40px;
+        font-size: 36px;
+        line-height: 36px;
+        float: left;
+        text-align: right;
+        margin-right: 10px;
+    }
+    
+    .agenda .agenda-date .shortdate {
+        font-size: 0.75em;
+    }
+    /* Times */
+    
+    .agenda .agenda-time {
+        width: 140px;
+    }
+    /* Events */
+    
+    .agenda .agenda-events {}
+    
+    .agenda .agenda-events .agenda-event {}
+    
+    @media (max-width: 767px) {}
+</style>
+
+<body>
+
+<div class="jumbotron text-center" style="background-color: #E64545">
+  <h2><i class="fa fa-calendar-o" aria-hidden="true"></i> Purposly<br>
+  <small style="color: white">Calendar with a purpose</small>
+  </h2>
+</div>
+
+<div class="row">
+  <div class="col col-md-2">
+  </div>
+  <div class="col col-md-8">
+
+    <div class="row">
+      <div class="col col-md-3">
+      </div>
+      <div class="col col-md-6">
+        <div class="progress">
+          <div class="progress-bar  progress-bar-danger" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width:10%">
+            <span class="sr-only">70% Complete</span>
+          </div>
+        </div>
+      </div>
+      <div class="col col-md-3">
+      </div>
+    </div>
+
+    <!Name>
+    <div style="text-align: center;">
+      <H3>What is your name ?</H3>
+      <div class="row">
+        <div class="col col-md-4">
+        </div>
+        <div class="col col-md-4">
+          <input type="text" class="form-control" id="usr"  placeholder="name">
+        </div>
+        <div class="col col-md-4">
+        </div>
+      </div>
+    </div>
+
+    <!Age>
+    <div style="text-align: center;">
+      <H3>What is your age ?</H3>
+      <div class="row">
+        <div class="col col-md-4">
+        </div>
+        <div class="col col-md-4">
+          <input type="text" class="form-control" id="usr"  placeholder="age">
+        </div>
+        <div class="col col-md-4">
+        </div>
+      </div>
+    </div>
+
+    <!Mode of transport>
+    <div style="text-align: center;">
+      <H3>What is your mode of transport ?<H3>
+
+      <i class="fa fa-male fa-2x" aria-hidden="true"></i>&nbsp;
+
+      <i class="fa fa-bicycle fa-2x" aria-hidden="true" style="color:#327728"></i>&nbsp;
+
+      <i class="fa fa-car fa-2x" aria-hidden="true" style="color:#774728"></i>&nbsp;
+
+      <i class="fa fa-bus fa-2x" aria-hidden="true" style="color:#f4ce42"></i>&nbsp;
+
+      <i class="fa fa-wheelchair-alt fa-2x" aria-hidden="true" style="color:#324d91"></i>
+    </div>
+
+
+
+    <!Interest>
+    <div style="text-align: center;">
+      <H3>What do you what to try ?</H3>
+      <div class="row">
+        <div class="col col-md-4">
+        </div>
+        <div class="col col-md-4">
+
+          <script type="text/javascript">
+
+          function yesnoCheck() {
+              if (document.getElementById('yesCheck').checked) {
+                  document.getElementById('ifYes').style.display = 'block';
+                  document.getElementById('ifNo').style.display = 'none';
+              }
+              if (document.getElementById('noCheck').checked) {
+              document.getElementById('ifYes').style.display = 'none';
+              document.getElementById('ifNo').style.display = 'block';
+            }
+          }
+          </script>
+
+          Voluntering <input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="yesCheck"> Social activity <input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="noCheck"><br>
+
+          <div id="ifYes" style="display:none">
+            <select class="form-control" id="sel1">
+              <option>Education</option>
+              <option>Homeless</option>
+              <option>Animal</option>
+              <option>Senior citizen</option>
+              <option>Special Need</option>
+              <option>Mental Health</option>
+              <option>Medical</option>
+              <option>Outdoor Work</option>
+              <option>Histoty</option>
+            </select>
+          </div>
+
+          <div id="ifNo" style="display:none">
+            <select class="form-control" id="sel1">
+              <option>Visual Arts</option>
+              <option>Culture</option>
+              <option>Music</option>
+              <option>Dance</option>
+              <option>Family and Youth</option>
+              <option>History</option>
+              <option>Literature</option>
+              <option>Science</option>
+              <option>Theatre</option>
+            </select>
+          </div>
+        </div>
+        </div>
+        <button class="btn btn-primary" style="width: 200px; margin: 20px" type="submit" id="submit">Submit</button>
+      </div>
+    </dvi>
+
+  </div>
+  <div class="col col-md-2">
+  </div>
+</div>
+
+<!Calendar>
+<div class="row">
+  <div class="col-sm-2">
+  </div>
+  <div class="col-sm-8">
+  <div class="container" style="width: 70%">
+    <div class="agenda">
+        <div class="table-responsive">
+            <table class="table table-condensed table-bordered">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Event</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Single event in a single day -->
+                    <tr>
+                        <td class="agenda-date" class="active" rowspan="1">
+                            <div class="dayofmonth">26</div>
+                            <div class="dayofweek">Saturday</div>
+                            <div class="shortdate text-muted">July, 2014</div>
+                        </td>
+                        <td class="agenda-time">
+                            5:30 AM
+                        </td>
+                        <td class="agenda-events">
+                            <div class="agenda-event">
+                                <i class="glyphicon glyphicon-repeat text-muted" title="Repeating event"></i>  Fishing
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Multiple events in a single day (note the rowspan) -->
+                    <tr>
+                        <td class="agenda-date" class="active" rowspan="3">
+                            <div class="dayofmonth">24</div>
+                            <div class="dayofweek">Thursday</div>
+                            <div class="shortdate text-muted">July, 2014</div>
+                        </td>
+                        <td class="agenda-time">
+                            8:00 - 9:00 AM
+                        </td>
+                        <td class="agenda-events">
+                            <div class="agenda-event">
+                                Client Appointment
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="agenda-time">
+                            10:15 AM - 12:00 PM
+                        </td>
+                        <td class="agenda-events">
+                            <div class="agenda-event">
+                                Meeting with Clients
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="agenda-time">
+                            7:00 - 9:00 PM
+                        </td>
+                        <td class="agenda-events">
+                            <div class="agenda-event">
+                                Conference
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+  </div>
+  </div>
+  <div class="col-sm-2">
+  </div>
+</div>
+
+<div id="demo"></div>
+
+<script>
+$(function() {
+   getLocation();
+}); 
+
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+  var mapProp= {
+  center:new google.maps.LatLng(position.coords.latitude,position.coords.longitude),
+  zoom:8,
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+
+/* Form submit */
+$("#submit").click(function(){
+	console.log("askdasd");
+	$.get( "/users/7", function(response) {
+	  console.log(response);
+	})
+});
+
+
+</script>
+
+<div id="googleMap" style="width:100%;height:400px;"></div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADbQmg2mDItY1XX3WbHuVWeJJbmX25Jd8&callback=myMap"></script>
+
+</body>
+</html>
