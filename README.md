@@ -12,8 +12,6 @@ We merged several data sets of cultural and volunteer opportunities, appending g
 
 The calendar uses a formula to predict the probability that you are not busy, based on previous input.
 
-![alt text](screenshot.png)
-
 ## Lessons Learned
 
 As a team without existing AI skills, we relied on our experience using Javascript, Python, and R. We spent a lot of time reviewing Montreal's open data sets and other repositories. We ran regressions to predict user relevance based on previous data. We also read about machine learning tools. Most of all, we had fun learning about the possibilities of AI for social good!
